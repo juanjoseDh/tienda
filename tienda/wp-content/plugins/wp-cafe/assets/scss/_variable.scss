@@ -1,0 +1,43 @@
+$white-color: #fff;
+$primary-color: #e3106e;
+$gray-color: #f1f5f8;
+$secondary-color: #e3106e;
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+
+//usage: @include shift([property],[duration],[easing]);
+@mixin transition($property: all, $duration: 0.4s, $ease: ease) {
+    transition: $property $duration $ease;
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -ms-transition: $property $duration $ease;
+}
+
+@mixin flex-position($display, $contet, $items) {
+    display: $display;
+    justify-content: $contet;
+    align-items: $items;
+}
+
+:root {
+    --white-color: $white-color;
+    --primary: $primary-color;
+    --secondary: $secondary-color;
+    --gray:  $gray-color;
+    --gray:  $gray-color;
+    --dark-color: #000000;
+    --dark-alt: #2F4858;
+	--dark-light: #1D2327;
+	--label-color: #77797E;    
+    --text-color: #87888B;
+    --secondary-color: #0073AA;
+}
